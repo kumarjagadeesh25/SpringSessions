@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<description>this is for Inner Bean and Bean Inheriatance</description>
+	<!-- <bean class="com.zonray.innerbean.Person"> <property name="pid" value="123" 
+		/> <property name="name" value="jagadeesh" /> <property name="address"> <bean 
+		id="address" class="com.zonray.innerbean.Address"> <property name="city" 
+		value="guntur" /> <property name="state" value="AP" /> </bean> </property> 
+		</bean> -->
+
+	<bean id="parents" class="com.zonray.innerbean.Student">
+		<property name="motherName" value="Sita"/>
+		<property name="fatherName" value="Ram"/>
+	</bean>
+	<bean id="anil" class="com.zonray.innerbean.Student" parent="parents">
+		<property name="sid" value="1" />
+		<property name="name" value="Anil Kumar" />
+	</bean>
+	 <bean id="sunil" class="com.zonray.innerbean.Student" parent="parents">
+	 	<property name="sid" value="2"/>
+	 	<property name="name" value="Sunil Kumar"/>	 
+	 </bean>
+
+</beans>

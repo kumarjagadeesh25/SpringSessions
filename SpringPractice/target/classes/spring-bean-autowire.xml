@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<description>this is for Autowiring </description>
+
+	<bean id="address" class="com.zonray.autowire.Address">
+		<property name="city" value="guntur" />
+		<property name="state" value="AP" />
+	</bean>
+	<bean class="com.zonray.autowire.Person" autowire="byName">
+		<property name="pid" value="101" />
+		<property name="name" value="Bashaa" />
+	</bean>
+	<bean class="com.zonray.autowire.Person2" autowire="byType">
+		<property name="pid" value="102" />
+		<property name="name" value="chandhu" />
+	</bean>
+</beans>
+
+

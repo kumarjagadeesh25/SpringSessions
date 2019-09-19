@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- <bean class="com.zonray.injection.Person"> <constructor-arg name="pid" 
+		value="1"/> <constructor-arg name="name" value="Chandhu"/> <constructor-arg 
+		name="salary" value="100000"/> </bean> -->
+
+	<!-- <bean class="com.zonray.injection.Person"> <constructor-arg value="100000" 
+		index="2" /> <constructor-arg index="1" value="Anil" /> <constructor-arg 
+		index="0" value="3" /> </bean> -->
+
+	<!-- <bean class="com.zonray.injection.Person"> <constructor-arg value="1" 
+		type="java.lang.String"/> <constructor-arg value="2000000" type="java.lang.Integer"/> 
+		<property name="name" value="Anil" /> </bean> -->
+
+	<bean class="com.zonray.injection.Person">
+		<property name="namesList">
+			<list>
+				<value>anil</value>
+				<value>sunil</value>
+				<value>alal</value>
+			</list>
+		</property>
+
+		<property name="namesSet">
+			<set>
+				<value>ravi</value>
+				<value>venkat</value>
+				<value>saii</value>
+			</set>
+		</property>
+		
+		<property name="empDetails">
+			<map>
+				<entry key="11" value="anil"/>
+				<entry key="12" value="babuu"/>
+				
+			</map>
+		</property>
+	</bean>
+
+
+
+
+
+
+
+
+
+
+
+</beans>
